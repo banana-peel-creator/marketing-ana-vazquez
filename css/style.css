@@ -1,0 +1,400 @@
+/* =========================================================
+   Ana Vazquez — base styles
+   Palette: vivid indigo + black/dark grays on white
+   Font: Montserrat (Google Fonts, SIL Open Font License — free to use)
+   ========================================================= */
+
+:root {
+  --indigo: #4F46E5;
+  --indigo-dark: #3730A3;
+  --indigo-tint: rgba(79, 70, 229, 0.08);
+  --black: #111111;
+  --gray-900: #1a1a1a;
+  --gray-700: #454545;
+  --gray-500: #767676;
+  --gray-300: #d9d9d9;
+  --gray-200: #e7e7e7;
+  --gray-100: #f6f6f7;
+  --white: #ffffff;
+  --sidebar-width: 260px;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--white);
+  color: var(--black);
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+img { max-width: 100%; display: block; }
+
+.page-wrap {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  border-right: 1px solid var(--gray-200);
+  padding: 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  margin-bottom: 2.25rem;
+  padding-left: 0.75rem;
+}
+
+.brand-logo {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+.nav-section-label {
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.09em;
+  font-weight: 600;
+  color: var(--gray-500);
+  margin: 1.5rem 0 0.5rem 0.75rem;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--gray-700);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav-list a svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  stroke: currentColor;
+}
+
+.nav-list a:hover {
+  background: var(--gray-100);
+  color: var(--black);
+}
+
+.nav-list a.active {
+  background: var(--indigo-tint);
+  color: var(--indigo);
+  font-weight: 600;
+}
+
+.sidebar-bottom .nav-list {
+  margin-top: 0;
+}
+
+/* mobile nav toggle (hidden on desktop) */
+.nav-toggle { display: none; }
+
+/* ---------- Main content ---------- */
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 3.5rem 4rem 5rem;
+  max-width: 920px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--indigo);
+  margin: 0 0 0.6rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0 0 1rem;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+.page-intro {
+  font-size: 1rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+  max-width: 620px;
+  margin-bottom: 2.5rem;
+}
+
+.section {
+  margin-top: 3rem;
+}
+
+.link-arrow {
+  color: var(--indigo);
+  font-weight: 600;
+  text-decoration: none;
+}
+.link-arrow:hover { text-decoration: underline; }
+
+/* ---------- Cards / grids ---------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.card-grid.cols-2 {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.card {
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+a.card { text-decoration: none; display: block; color: inherit; }
+a.card:hover { border-color: var(--indigo); transform: translateY(-2px); }
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  background: var(--indigo-tint);
+  color: var(--indigo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+}
+.card-icon svg { width: 20px; height: 20px; stroke: currentColor; }
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+}
+
+.card p {
+  font-size: 0.88rem;
+  color: var(--gray-700);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--indigo);
+  background: var(--indigo-tint);
+  border-radius: 100px;
+  padding: 0.2rem 0.6rem;
+  margin: 0.75rem 0.35rem 0 0;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--indigo-tint), var(--gray-100));
+  border: 1px dashed var(--gray-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-500);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.avatar-placeholder {
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  background: var(--indigo);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.about-photo {
+ /* width: 96px;
+  height: 96px;*/
+  width: 156px;
+  height: 156px;
+  margin-top: 1.5rem;
+  border-radius: 16px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* quote / reference cards */
+.quote-card {
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+.quote-card p.quote {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--gray-900);
+  margin: 0 0 1.25rem;
+}
+.quote-person {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.quote-person .name {
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+.quote-person .role {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+}
+
+/* list rows (reading list / tools) */
+.row-list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--gray-200); }
+.row-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--gray-200);
+  text-decoration: none;
+  color: inherit;
+}
+.row-item:hover .row-title { color: var(--indigo); }
+.row-title { font-weight: 600; font-size: 0.95rem; transition: color 0.15s ease; }
+.row-meta { font-size: 0.8rem; color: var(--gray-500); white-space: nowrap; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--indigo);
+  color: var(--white) !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 8px;
+  transition: background 0.15s ease;
+}
+.btn:hover { background: var(--indigo-dark); }
+
+.footnote {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-200);
+  font-size: 0.8rem;
+  color: var(--gray-500);
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 820px) {
+  .page-wrap { flex-direction: column; }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-right: none;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .brand { margin-bottom: 0; padding-left: 0; }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-200);
+    background: var(--white);
+  }
+  .nav-toggle svg { width: 18px; height: 18px; stroke: var(--black); }
+
+  .sidebar-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 0.75rem 1.25rem 1.25rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  }
+  .sidebar-nav.open { display: block; }
+
+  .content { padding: 2.5rem 1.5rem 4rem; }
+  h1 { font-size: 1.9rem; }
+}
