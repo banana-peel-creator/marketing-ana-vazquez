@@ -20,8 +20,7 @@ var SIDEBAR_HTML = `
           <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>Home</a></li>
           <li><a href="about.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>About</a></li>
           <li><a href="projects.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 3 12l5 6"/><path d="M16 6l5 6-5 6"/></svg>Projects</a></li>
-          <li><a href="references.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-9.3-8.4C.9 8 2 4.6 5.2 4.1c2-.3 3.7.7 4.7 2.3 1-1.6 2.7-2.6 4.7-2.3 3.2.5 4.3 3.9 2.5 7.5C19 15.7 12 20 12 20z"/></svg>References</a></li>
-        </ul>
+<li><a href="references.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20C9 17 4 15 3 11C2 7 3 4 6 4C9 4 10.5 5.5 12 7C13.5 5.5 15 4 18 4C21 4 22 7 21 11C20 15 15 17 12 20Z"/></svg>References</a></li>        </ul>
 
         <p class="nav-section-label">Resources</p>
         <ul class="nav-list">
