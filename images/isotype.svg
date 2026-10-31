@@ -1,0 +1,12 @@
+<!-- Approximation of the Ana Vazquez isotype (story bubble + cursor + click rays).
+     Replace with the official SVG from the brand "Logo Files" folder when available. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 112" role="img" aria-label="Ana Vazquez isotype">
+  <rect x="4" y="10" width="112" height="78" rx="24" fill="#1F51FF"/>
+  <path d="M26 80 L18 108 L56 84 Z" fill="#1F51FF"/>
+  <path d="M52 28 L52 74 L63 63 L71 81 L80 77 L72 59 L87 58 Z" fill="#FFFFFF"/>
+  <g stroke="#FFC531" stroke-width="5.5" stroke-linecap="round">
+    <line x1="44" y1="16" x2="44" y2="24"/>
+    <line x1="30" y1="22" x2="36" y2="28"/>
+    <line x1="25" y1="37" x2="33" y2="37"/>
+  </g>
+</svg>
