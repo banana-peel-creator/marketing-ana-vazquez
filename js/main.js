@@ -8,35 +8,36 @@ var SIDEBAR_HTML = `
     <div>
       <div style="display:flex; align-items:center; justify-content:space-between;">
         <a href="index.html" class="brand" aria-label="Ana Vazquez — home">
-          <img src="images/isotype.svg" alt="" class="brand-iso">
+          <img src="images/isotype.svg" alt="" class="brand-iso" width="40" height="37">
           <span class="brand-text">
             <span class="brand-name">ana vazquez</span>
             <span class="brand-desc">Product Marketing &amp; Digital Experience</span>
           </span>
         </a>
-        <button class="nav-toggle" aria-label="Toggle menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <svg class="icon-open" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <svg class="icon-close" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
         </button>
       </div>
 
-      <nav class="sidebar-nav">
+      <nav class="sidebar-nav" id="site-nav" aria-label="Main">
         <ul class="nav-list">
-          <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>Home</a></li>
-          <li><a href="about.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>About</a></li>
-          <li><a href="projects.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 3 12l5 6"/><path d="M16 6l5 6-5 6"/></svg>Things I've built</a></li>
-          <li><a href="method.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h12l-2 4 2 4H5"/></svg>Mile One Method</a></li>
-<li><a href="references.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20C9 17 4 15 3 11C2 7 3 4 6 4C9 4 10.5 5.5 12 7C13.5 5.5 15 4 18 4C21 4 22 7 21 11C20 15 15 17 12 20Z"/></svg>References</a></li>        </ul>
+          <li><a href="index.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>Home</a></li>
+          <li><a href="about.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>About</a></li>
+          <li><a href="projects.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 3 12l5 6"/><path d="M16 6l5 6-5 6"/></svg>Things I've built</a></li>
+          <li><a href="method.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h12l-2 4 2 4H5"/></svg>Mile One Method</a></li>
+<li><a href="references.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20C9 17 4 15 3 11C2 7 3 4 6 4C9 4 10.5 5.5 12 7C13.5 5.5 15 4 18 4C21 4 22 7 21 11C20 15 15 17 12 20Z"/></svg>References</a></li>        </ul>
 
         <p class="nav-section-label">Resources</p>
         <ul class="nav-list">
-          <li><a href="reading-list.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg>Reading List</a></li>
-          <li><a href="tools.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7.4a4.4 4.4 0 0 1-5.9 4.2L8.6 18a1.5 1.5 0 1 1-2.1-2.1l6.4-6.5A4.4 4.4 0 0 1 17 3c.4 0 .8.1 1.2.2l-3 3 1.4 1.4 3-3c.2.4.4.9.4 1.4V7.4z"/></svg>Tools</a></li>
-          <li><a href="podcasts.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="10" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>Podcasts</a></li>
+          <li><a href="reading-list.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg>Reading List</a></li>
+          <li><a href="tools.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7.4a4.4 4.4 0 0 1-5.9 4.2L8.6 18a1.5 1.5 0 1 1-2.1-2.1l6.4-6.5A4.4 4.4 0 0 1 17 3c.4 0 .8.1 1.2.2l-3 3 1.4 1.4 3-3c.2.4.4.9.4 1.4V7.4z"/></svg>Tools</a></li>
+          <li><a href="podcasts.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="10" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>Podcasts</a></li>
         </ul>
 
         <p class="nav-section-label">Connect</p>
         <ul class="nav-list">
-          <li><a href="https://www.linkedin.com/in/anacvazquez/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10.5V17"/><circle cx="8" cy="7.2" r="0.3" fill="currentColor"/><path d="M12 17v-4c0-1.4 1-2.5 2.3-2.5s2.2 1 2.2 2.5V17"/></svg>LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/anacvazquez/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10.5V17"/><circle cx="8" cy="7.2" r="0.3" fill="currentColor"/><path d="M12 17v-4c0-1.4 1-2.5 2.3-2.5s2.2 1 2.2 2.5V17"/></svg>LinkedIn</a></li>
         </ul>
 
         <div class="sidebar-cta">
@@ -63,12 +64,34 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // --- decorative icons + skip link ---
+  var main = document.querySelector('main.content');
+  if (main) {
+    if (!main.id) main.id = 'main';
+    var skip = document.createElement('a');
+    skip.className = 'skip-link';
+    skip.href = '#' + main.id;
+    skip.textContent = 'Skip to content';
+    document.body.insertBefore(skip, document.body.firstChild);
+  }
+
   // --- mobile menu toggle ---
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.sidebar-nav');
   if (toggle && nav) {
+    var setOpen = function (open) {
+      nav.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
     toggle.addEventListener('click', function () {
-      nav.classList.toggle('open');
+      setOpen(!nav.classList.contains('open'));
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) { setOpen(false); toggle.focus(); }
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setOpen(false);
     });
   }
 });
